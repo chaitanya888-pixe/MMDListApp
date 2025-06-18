@@ -1,5 +1,0 @@
-com.sample.assesmentapp.test.app-core-1.6.1-0 C:\Users\chait\.gradle\caches\transforms-3\8503e79095c4697033a193a5d622431d\transformed\core-1.6.1\res
-com.sample.assesmentapp.test.app-androidTest-1 D:\AndroidProjects\TCS\NisumAssesment-master\List_Assesment\app\build\generated\res\resValues\androidTest\debug
-com.sample.assesmentapp.test.app-mergeDebugAndroidTestResources-2 D:\AndroidProjects\TCS\NisumAssesment-master\List_Assesment\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
-com.sample.assesmentapp.test.app-mergeDebugAndroidTestResources-3 D:\AndroidProjects\TCS\NisumAssesment-master\List_Assesment\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
-com.sample.assesmentapp.test.app-debugAndroidTest-4 D:\AndroidProjects\TCS\NisumAssesment-master\List_Assesment\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
