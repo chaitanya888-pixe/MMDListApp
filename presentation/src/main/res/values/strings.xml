@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="details_screen">Details Screen</string>
+    <string name="list_screen">List Screen</string>
+    <string name="home">Home</string>
+</resources>

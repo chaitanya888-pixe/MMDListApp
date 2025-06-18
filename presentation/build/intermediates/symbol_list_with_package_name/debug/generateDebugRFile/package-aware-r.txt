@@ -1,0 +1,13 @@
+com.sample.presentation
+dimen corner_radius_5dp
+dimen height_100dp
+dimen height_16dp
+dimen margin_5dp
+dimen padding_10dp
+dimen padding_5dp
+dimen size_24dp
+drawable forward_arrow
+drawable image_error
+string details_screen
+string home
+string list_screen
