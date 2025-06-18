@@ -1,0 +1,3 @@
+com.sample.assesmentapp.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme
