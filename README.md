@@ -23,7 +23,7 @@ https://github.com/user-attachments/assets/87352eda-8d98-447a-87b1-86c772a0c6a6
 ## API Integration
 
 This project uses the following public API for fetching articles:
-- **API URL**: [https://newsapi.org/](https://newsapi.org/)
+- **API URL**: [(https://newsapi.org/v2/)]
 
 ---
 
