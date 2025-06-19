@@ -4,6 +4,23 @@ This project demonstrates various Android development concepts using **Jetpack C
 
 https://github.com/user-attachments/assets/87352eda-8d98-447a-87b1-86c772a0c6a6
 
+## Architecture
+
+The app follows a **modular architecture pattern** with the following main modules:
+
+- **core**:  
+  Contains shared resources and configurations essential for the app.
+
+- **data**:  
+  Responsible for managing data sources, including local storage, remote APIs, and caching.
+
+- **domain**:  
+  Manages the app’s business logic, including use cases and entities.
+
+- **presentation**:  
+  Handles the UI using Jetpack Compose to render views and manage user interactions.
+
+
 ---
 
 ## Features
@@ -23,7 +40,7 @@ https://github.com/user-attachments/assets/87352eda-8d98-447a-87b1-86c772a0c6a6
 ## API Integration
 
 This project uses the following public API for fetching articles:
-- **API URL**: [https://newsapi.org/v2/]
+- **API URL**: [https://newsapi.org/]
 
 ---
 
