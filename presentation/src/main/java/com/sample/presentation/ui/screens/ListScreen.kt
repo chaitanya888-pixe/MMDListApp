@@ -78,7 +78,7 @@ fun ListScreen(viewModel: NewsViewModel, navController: NavController) {
                     CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
                 }
             } else {
-                LazyColumn {
+                LazyColumn(modifier = Modifier.background(Color.LightGray)) {
                     items(items) { newsModel ->
                         ListItem(newsModel, onClick = {
                             viewModel.setSelectedUser(newsModel)
@@ -99,7 +99,7 @@ fun ListItem(article: NewsInfo, onClick: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(dimensionResource(R.dimen.padding_10dp))
+            .padding(dimensionResource(R.dimen.padding_5dp))
     ) {
 
         Card(
@@ -128,7 +128,7 @@ fun ListItem(article: NewsInfo, onClick: () -> Unit) {
                         fontWeight = FontWeight.Bold
                     )
                     Text(
-                        text = article.description ?: "No description",
+                        text = article.sourceName ?: "NA",
                         modifier = Modifier.padding(dimensionResource(R.dimen.padding_5dp)),
                         color = Color.Gray
                     )
@@ -149,24 +149,6 @@ fun ListItem(article: NewsInfo, onClick: () -> Unit) {
 /** Set the image data to list item */
 @Composable
 private fun SetImage(article: NewsInfo) {
-    /*article.imageUrl?.let { imageUrl ->
-        AsyncImage(
-            model = imageUrl,
-            contentDescription = null,
-            placeholder = painterResource(R.drawable.image_error),
-            error = painterResource(R.drawable.image_error),
-            modifier = Modifier
-                .size(dimensionResource(R.dimen.height_100dp))
-                .padding(dimensionResource(R.dimen.padding_5dp))
-                .clip(RoundedCornerShape(dimensionResource(R.dimen.corner_radius_5dp)))
-                .border(
-                    1.dp,
-                    Color.Gray,
-                    RoundedCornerShape(dimensionResource(R.dimen.corner_radius_5dp))
-                ),
-            contentScale = ContentScale.Crop
-        )
-    }*/
     NetworkImage(
         imageUrl = article.imageUrl,
         contentDescription = "Article image",

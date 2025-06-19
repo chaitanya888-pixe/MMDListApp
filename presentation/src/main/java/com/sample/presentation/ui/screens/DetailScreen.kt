@@ -56,7 +56,7 @@ fun DetailScreen(viewModel: NewsViewModel, onBackClick: () -> Unit) {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
-                .padding(dimensionResource(R.dimen.padding_5dp)),
+                .padding(dimensionResource(R.dimen.padding_10dp)),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             NetworkImage(
@@ -64,11 +64,11 @@ fun DetailScreen(viewModel: NewsViewModel, onBackClick: () -> Unit) {
                 contentDescription = null,
                 modifier = Modifier
                     .wrapContentSize()
-                    .clip(RoundedCornerShape(dimensionResource(R.dimen.corner_radius_5dp)))
+                    .clip(RoundedCornerShape(dimensionResource(R.dimen.corner_radius_10dp)))
                     .border(
                         1.dp,
                         Color.Gray,
-                        RoundedCornerShape(dimensionResource(R.dimen.corner_radius_5dp))
+                        RoundedCornerShape(dimensionResource(R.dimen.corner_radius_10dp))
 
                     )
             )
