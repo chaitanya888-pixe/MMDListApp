@@ -4,7 +4,6 @@ This project demonstrates various Android development concepts using **Jetpack C
 
 ## Screenshots
 
-![Alt ListScreen](https://github.com/chaitanya888-pixe/MMDListApp/blob/f88cbfd869f808b780efb5209d6e4bdf6877a79e/ListScreen.jpg)
 <p align="center">
   <img src="https://raw.githubusercontent.com/chaitanya888-pixe/MMDListApp/f88cbfd869f808b780efb5209d6e4bdf6877a79e/ListScreen.jpg" alt="List Screen" width="45%" />
   <img src="https://raw.githubusercontent.com/chaitanya888-pixe/MMDListApp/233004a31b384139af7bdcbe03d407cadff51588/DetailsScreen.jpg" alt="Details Screen" width="45%" />
