@@ -5,8 +5,8 @@ This project demonstrates various Android development concepts using **Jetpack C
 ## Screenshots
 
 <p align="center">
-  <img src="assets/ListScreen.jpg" alt="Home Screen" width="45%" />
-  <img src="assets/DetailsScreen.jpg" alt="Details Screen" width="45%" />
+  <img src="ListScreen.jpeg" alt="List Screen" width="45%" />
+  <img src="DetailsScreen.jpeg" alt="Details Screen" width="45%" />
 </p>
 
 https://github.com/user-attachments/assets/87352eda-8d98-447a-87b1-86c772a0c6a6
