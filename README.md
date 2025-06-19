@@ -3,11 +3,11 @@
 This project demonstrates various Android development concepts using **Jetpack Compose**, **Retrofit**, and **Clean Architecture**. It displays a list of articles fetched from a public API along with detailed information about each article.
 
 ## Screenshots
-
 <p>
-  <img src="https://raw.githubusercontent.com/chaitanya888-pixe/MMDListApp/f88cbfd869f808b780efb5209d6e4bdf6877a79e/ListScreen.jpg" alt="List Screen" width="45%" />
-  <img src="https://raw.githubusercontent.com/chaitanya888-pixe/MMDListApp/233004a31b384139af7bdcbe03d407cadff51588/DetailsScreen.jpg" alt="Details Screen" width="45%" />
+  <img src="https://raw.githubusercontent.com/chaitanya888-pixe/MMDListApp/9bf41e6d1953cc46c669f227faf1a3e43c6a6722/ListScreen.jpeg" alt="List Screen" width="45%" />
+  <img src="https://raw.githubusercontent.com/chaitanya888-pixe/MMDListApp/9bf41e6d1953cc46c669f227faf1a3e43c6a6722/DetailsScreen.jpeg" alt="Details Screen" width="45%" />
 </p>
+
 
 
 https://github.com/user-attachments/assets/87352eda-8d98-447a-87b1-86c772a0c6a6
