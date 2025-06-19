@@ -1,8 +1,11 @@
 package com.sample.data.repository
 
 import com.sample.data.mapper.NewsMapper
+import com.sample.data.model.Article
 import com.sample.data.model.NewsResponse
+import com.sample.data.model.Source
 import com.sample.data.network.APIService
+import com.sample.data.repository.datasource.RemoteDataSource
 import com.sample.domain.model.NewsInfo
 import io.mockk.coEvery
 import io.mockk.every
@@ -21,17 +24,19 @@ import org.junit.Before
 import org.junit.Test
 
 
-@ExperimentalCoroutinesApi
+@OptIn(ExperimentalCoroutinesApi::class)
 class RepositoryImplTest {
-    private val apiService: APIService = mockk()
-    private val mapper: NewsMapper = mockk()
+
     private lateinit var repository: RepositoryImpl
+    private val remoteDataSource: RemoteDataSource = mockk()
+    private val mapper: NewsMapper = mockk()
+
     private val testDispatcher = StandardTestDispatcher()
 
     @Before
     fun setUp() {
         Dispatchers.setMain(testDispatcher)
-        repository = RepositoryImpl(apiService, mapper)
+        repository = RepositoryImpl(remoteDataSource, mapper)
     }
 
     @After
@@ -40,23 +45,29 @@ class RepositoryImplTest {
     }
 
     @Test
-    fun `getNewsList emits success when API and mapping succeed`() = runTest {
-        val apiResponse = NewsResponse("ok", 1, listOf())
-        val mappedList = listOf(
-            NewsInfo("Title", "Description", "URL", "Date", "Testing")
+    fun `getNewsList emits success result when API call and mapping succeed`() = runTest {
+        val newsResponse = NewsResponse(
+            status = "ok",
+            totalResults = 1,
+            articles = listOf(Article(Source("1", "Test Source"), "Author", "Title", "Description", "url", "image", "date"))
         )
-        coEvery { apiService.getNewsHeadlines(any(), any()) } returns apiResponse
-        every { mapper.mapFromApiResponse(apiResponse) } returns mappedList
+        val expectedMappedList = listOf(
+            NewsInfo("Title", "Description", "https://example.com/image.jpg","Date","Google")
+        )
+        coEvery { remoteDataSource.getNewsHeadlines() } returns newsResponse
+        every { mapper.mapFromApiResponse(newsResponse) } returns expectedMappedList
         val result = repository.getNewsList().first()
         assertTrue(result.isSuccess)
-        assertEquals(mappedList, result.getOrNull())
+        assertEquals(expectedMappedList, result.getOrNull())
     }
 
     @Test
-    fun `getNewsList emits failure when API throws exception`() = runTest {
-        coEvery { apiService.getNewsHeadlines(any(), any()) } throws RuntimeException("Network error")
+    fun `getNewsList emits failure result when exception is thrown`() = runTest {
+        val errorMessage = "Network failure"
+        coEvery { remoteDataSource.getNewsHeadlines() } throws RuntimeException(errorMessage)
         val result = repository.getNewsList().first()
         assertTrue(result.isFailure)
-        assertEquals("Network error", result.exceptionOrNull()?.message)
+        assertEquals(errorMessage, result.exceptionOrNull()?.message)
     }
 }
+
