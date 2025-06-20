@@ -1,6 +1,6 @@
-package com.sample.core.di
+package com.sample.presentation.di
 
-import com.sample.core.BuildConfig
+import com.sample.presentation.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

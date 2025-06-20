@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm")
+    kotlin("kapt")
 
 }
 dependencies {
@@ -11,10 +12,8 @@ dependencies {
     // Coroutines
     implementation(libs.coroutines.core)
     //Dagger
-    /*implementation(libs.hilt.core)
-    kapt(libs.hilt.compiler)*/
-    implementation(libs.javax.inject)
-
+    implementation(libs.hilt.core)
+    kapt(libs.hilt.compiler)
     //Testing frame works
     testImplementation(libs.mockito.core)
     testImplementation(libs.mockito.kotlin)

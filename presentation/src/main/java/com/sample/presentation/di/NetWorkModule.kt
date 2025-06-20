@@ -1,4 +1,4 @@
-package com.sample.data.di
+package com.sample.presentation.di
 
 import com.sample.data.network.APIService
 import dagger.Module
