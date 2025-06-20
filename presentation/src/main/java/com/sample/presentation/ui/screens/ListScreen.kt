@@ -123,12 +123,12 @@ fun ListItem(article: NewsInfo, onClick: () -> Unit) {
                     .padding(dimensionResource(R.dimen.padding_5dp))
                     .weight(1f)) {
                     Text(
-                        text = article.title ?: "No title",
+                        text = article.title ?:  stringResource(R.string.no_title),
                         modifier = Modifier.padding(dimensionResource(R.dimen.padding_5dp)),
                         fontWeight = FontWeight.Bold
                     )
                     Text(
-                        text = article.sourceName ?: "NA",
+                        text = article.sourceName ?: stringResource(R.string.na),
                         modifier = Modifier.padding(dimensionResource(R.dimen.padding_5dp)),
                         color = Color.Gray
                     )
@@ -136,7 +136,7 @@ fun ListItem(article: NewsInfo, onClick: () -> Unit) {
 
                 Image(
                     painter = painterResource(id = R.drawable.forward_arrow),
-                    contentDescription = "Forward",
+                    contentDescription = stringResource(R.string.forward),
                     modifier = Modifier
                         .align(Alignment.CenterVertically)
                                     )
@@ -151,7 +151,7 @@ fun ListItem(article: NewsInfo, onClick: () -> Unit) {
 private fun SetImage(article: NewsInfo) {
     NetworkImage(
         imageUrl = article.imageUrl,
-        contentDescription = "Article image",
+        contentDescription = stringResource(R.string.article_image),
         modifier = Modifier
             .size(dimensionResource(R.dimen.height_100dp))
             .padding(dimensionResource(R.dimen.padding_5dp)),

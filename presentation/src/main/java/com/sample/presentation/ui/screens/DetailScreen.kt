@@ -46,7 +46,7 @@ fun DetailScreen(viewModel: NewsViewModel, onBackClick: () -> Unit) {
                 IconButton(onClick = onBackClick) {
                     Icon(
                         imageVector = Icons.Default.ArrowBack,
-                        contentDescription = "Back", tint = Color.White
+                        contentDescription = stringResource(R.string.back), tint = Color.White
                     )
                 }
             }
@@ -75,11 +75,11 @@ fun DetailScreen(viewModel: NewsViewModel, onBackClick: () -> Unit) {
 
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.height_16dp)))
             Text(
-                text = selectedModel?.title ?: "No title", fontWeight = FontWeight.Bold,
+                text = selectedModel?.title ?: stringResource(R.string.no_title), fontWeight = FontWeight.Bold,
                 modifier = Modifier.align(Alignment.Start)
             )
             Text(
-                text = selectedModel?.description ?: "No description",
+                text = selectedModel?.description ?: stringResource(R.string.no_description),
                 modifier = Modifier.align(Alignment.Start)
             )
         }
