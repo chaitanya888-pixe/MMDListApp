@@ -2,8 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.dagger.hilt.android)
-    alias(libs.plugins.ksp)
-    alias(libs.plugins.kotlin.kapt) // Add kapt plugin
+    alias(libs.plugins.kotlin.kapt)
+
+
 }
 
 
@@ -29,41 +30,32 @@ dependencies {
     implementation(libs.activity.compose)
     implementation(libs.navigation.compose)
     implementation(libs.androidx.core.ktx)
-   //Modules
+    implementation(libs.androidx.ui.tooling.preview.android)
+    //Modules
     implementation(project(":core"))
+    implementation(project(":presentation"))
     implementation(project(":data"))
     implementation(project(":domain"))
-    implementation(project(":presentation"))
+    //Hilt Dependency Injection
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compile.android)
     // Retrofit
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.gson)
+    implementation(libs.okhttp.logging)
     implementation(libs.gson)
-   // implementation("androidx.compose.compiler:compiler:1.5.12")
-
     // Coroutines
     implementation(libs.coroutines.core)
     implementation(libs.coroutines.android)
-
     // Hilt Dependency Injection
     implementation(libs.hilt.android)
-    implementation(libs.hilt.compile.android)
+    kapt(libs.hilt.compile.android)
     implementation(libs.hilt.navigation.compose)
-
-    // Room
-    implementation(libs.room.runtime)
-    implementation(libs.androidx.ui.tooling.preview.android)
-    kapt(libs.room.compiler)
-    implementation(libs.room.ktx) // Fixed missing parenthesis
-
-    //Security
-    implementation(libs.security.crypto)
-
-
     //Testing dependencies
     testImplementation(libs.coroutines.test)
     testImplementation(libs.mockito.core)
     testImplementation(libs.mockito.kotlin)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core) // Fixed extra parenthesis
+    androidTestImplementation(libs.androidx.espresso.core)
 }

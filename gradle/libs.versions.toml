@@ -31,10 +31,13 @@ activity-compose = "1.9.0"
 navigationCompose = "2.7.7"
 uiToolingPreviewAndroid = "1.7.8"
 coil = "2.5.0"
+uiToolingPreviewAndroidVersion = "1.8.3"
+javaxInject = "1"
 
 
 [libraries]
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+javax-inject = { module = "javax.inject:javax.inject", version.ref = "javaxInject" }
 
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 coil-svg = { module = "io.coil-kt:coil-svg", version.ref = "coil" }
@@ -69,10 +72,7 @@ retrofit-converter-gson = { module = "com.squareup.retrofit2:converter-gson", ve
 okhttp-logging = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp-logging" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 
-#  Room
-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+
 
 #  Coroutines
 coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
@@ -81,6 +81,9 @@ coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", ve
 
 #  Hilt
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-core = { module = "com.google.dagger:dagger", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "hilt" }
+
 hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 hilt-compile-android = {module="com.google.dagger:hilt-android-compiler",version.ref="hilt"}
 security-crypto = { module = "androidx.security:security-crypto", version.ref = "securityCrypto" }
@@ -89,6 +92,7 @@ mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockito-kotlin" }
 androidx-ui-tooling-preview-android = { group = "androidx.compose.ui", name = "ui-tooling-preview-android", version.ref = "uiToolingPreviewAndroid" }
 turbine = { module = "app.cash.turbine:turbine", version = "1.0.0" }
+ui-tooling-preview-android = { group = "androidx.compose.ui", name = "ui-tooling-preview-android", version.ref = "uiToolingPreviewAndroidVersion" }
 
 
 [plugins]

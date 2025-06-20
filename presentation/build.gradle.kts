@@ -2,13 +2,12 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.dagger.hilt.android)
-    alias(libs.plugins.ksp)
-    alias(libs.plugins.kotlin.kapt) // Add kapt plugin
-     }
+    alias(libs.plugins.kotlin.kapt)
+}
 
 android {
     namespace = "com.sample.presentation"
-    }
+}
 
 dependencies {
 
@@ -25,12 +24,13 @@ dependencies {
     implementation(libs.coil.svg)
     implementation(libs.coil.gif)
     //Modules
-    implementation(project(":domain"))
     implementation(project(":core"))
-
-    // Retrofit
+    implementation(project(":data"))
+    implementation(project(":domain"))
+    // Retrofit Networking
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.gson)
+    implementation(libs.okhttp.logging)
     implementation(libs.gson)
 
     // Coroutines
@@ -39,18 +39,10 @@ dependencies {
 
     // Hilt Dependency Injection
     implementation(libs.hilt.android)
-    implementation(libs.hilt.compile.android)
+    kapt(libs.hilt.compile.android)
     implementation(libs.hilt.navigation.compose)
 
-    // Room
-    implementation(libs.room.runtime)
-    kapt(libs.room.compiler)
-    implementation(libs.room.ktx)
-
-    //Security
-    implementation(libs.security.crypto)
-
-    //Testing frmae works
+    //Testing frame works
     testImplementation(libs.mockito.core)
     testImplementation(libs.mockito.kotlin)
     testImplementation(libs.junit)
