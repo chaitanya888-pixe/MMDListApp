@@ -10,7 +10,6 @@ android {
 }
 
 dependencies {
-
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.foundation)
     implementation(libs.compose.ui)
@@ -32,25 +31,21 @@ dependencies {
     implementation(libs.retrofit.converter.gson)
     implementation(libs.okhttp.logging)
     implementation(libs.gson)
-
     // Coroutines
     implementation(libs.coroutines.core)
     implementation(libs.coroutines.android)
-
     // Hilt Dependency Injection
     implementation(libs.hilt.android)
     kapt(libs.hilt.compile.android)
     implementation(libs.hilt.navigation.compose)
-
     //Testing frame works
     testImplementation(libs.mockito.core)
     testImplementation(libs.mockito.kotlin)
     testImplementation(libs.junit)
     testImplementation(libs.junit)
     testImplementation(libs.coroutines.test)
-    testImplementation(libs.turbine) // For Flow testing
+    testImplementation(libs.turbine)
     testImplementation(libs.mockk)
-
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }

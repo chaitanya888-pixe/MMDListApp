@@ -1,6 +1,5 @@
 plugins {
     kotlin("jvm")
-
 }
 
 dependencies {
@@ -11,7 +10,5 @@ dependencies {
     implementation(libs.gson)
     // Coroutines
     implementation(libs.coroutines.core)
-   // implementation(libs.hilt.core)
-   // kapt(libs.hilt.compiler)
-}
+  }
 

@@ -3,25 +3,19 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.dagger.hilt.android)
     alias(libs.plugins.kotlin.kapt)
-
-
 }
 
 
 android {
     namespace = "com.sample.assesmentapp"
-
     defaultConfig {
         applicationId = "com.sample.assesmentapp"
         versionCode = 1
         versionName = "1.0"
     }
-
-
 }
 
 dependencies {
-
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.foundation)
     implementation(libs.compose.ui)

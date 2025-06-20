@@ -1,7 +1,6 @@
 plugins {
     kotlin("jvm")
     kotlin("kapt")
-
 }
 dependencies {
     implementation(project(":domain"))
@@ -18,7 +17,7 @@ dependencies {
     testImplementation(libs.mockito.core)
     testImplementation(libs.mockito.kotlin)
     testImplementation(libs.coroutines.test)
-    testImplementation(libs.turbine) // For Flow testing
+    testImplementation(libs.turbine)
     testImplementation(libs.mockito.kotlin)
     testImplementation(libs.mockk)
     testImplementation(libs.junit)
