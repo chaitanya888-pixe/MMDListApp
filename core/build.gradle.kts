@@ -14,8 +14,8 @@ val localProperties = Properties().apply {
 
 val baseUrl = localProperties.getProperty("baseUrl") ?: ""
 val apiKey = localProperties.getProperty("apiKey") ?: ""
-
 val generatedDir = layout.buildDirectory.dir("generated/constants")
+
 
 val generateConstants = tasks.register("generateConstants") {
     val outputDir = generatedDir.get().asFile
