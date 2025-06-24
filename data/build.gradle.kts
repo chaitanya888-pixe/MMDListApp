@@ -8,6 +8,7 @@ dependencies {
    // Retrofit Networking
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.gson)
+    implementation(libs.okhttp.logging)
     // Coroutines
     implementation(libs.coroutines.core)
     //Dagger

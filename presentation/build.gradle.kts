@@ -24,7 +24,6 @@ dependencies {
     implementation(libs.coil.gif)
     //Modules
     implementation(project(":core"))
-    implementation(project(":data"))
     implementation(project(":domain"))
     // Retrofit Networking
     implementation(libs.retrofit)
